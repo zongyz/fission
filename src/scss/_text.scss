@@ -1,0 +1,56 @@
+/**
+ 文本
+ 
+ */
+
+/* 基本字体 */
+body{
+  // font-family: 'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+  // font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: 14px;
+  font-height: 180%;
+  color:#333344;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 标题 */
+h1{
+  font-size:32px;
+}
+h2{
+  font-size:24px;
+}
+h3{
+  font-size:20px;
+}
+h4{
+  font-size:16px;
+}
+h5{
+  font-size:14px;
+}
+h6{
+  font-size:12px;
+}
+
+/* 段落 */
+p{
+  margin:1em 0;
+}
+
+/* 链接 */
+
+/* 色彩 */
+
+
+/* 自定义文字尺寸(不建议使用) */
+.fs-12{
+}
+.fs-14{
+}
+.fs-16{
+}
+.fs-18{
+}
+/* 自定义文字颜色(不建议使用) */
