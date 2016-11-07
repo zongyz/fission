@@ -1,0 +1,19 @@
+
+@import "mixin";
+
+.float-left{
+    float:left !important;
+}
+.float-right{
+    float:right !important;
+}
+.clearfix{
+  @include clearfix();
+}
+
+.text-box{
+    display:inline-block;
+    padding-top:4px;
+    padding-bottom:4px;
+    line-height:24px;
+}

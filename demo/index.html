@@ -2,41 +2,98 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<title>Reactor Demo</title>
-	<link rel="stylesheet" href="/src/css/all.css">
-	<link rel="stylesheet" href="/demo/demo.css">
-  <script src="/vendor/angularjs/angular.js"></script>
+	<title>Fission Demo</title>
+	<link rel="stylesheet" href="../dist/fission.css">
+	<link rel="stylesheet" href="../demo/demo.css">
+  <script src="../vendor/angularjs/angular.min.js"></script>
   <script src="demo-tpl.js"></script>
   <script src="demo.js"></script>
 </head>
 <body class="demo">
 
-  <div class="demo-page-title"><h6>fission demo</h6></div>
+  <div class="demo-page-title text-center">
+    <h6>Fission demo</h6>
+  </div>
   <div class="demo-main">
 
     <div chapter="文本" describe="">
-      <div sub-chapter="字体" describe="" page="text.font"></div>
-      <!-- <div sub-chapter="标题" describe="" page="text.title"></div>
-      <div sub-chapter="段落" describe="" page="text.paragraph"></div>
-      <div sub-chapter="列表" describe="" page="text.list"></div>
-      <div sub-chapter="链接" describe="" page="text.link"></div> -->
+      <div sub-chapter="字体" page="text.font"></div>
+      <div sub-chapter="样式" page="text.style"></div>
+      <!--<div sub-chapter="标题" page="text.title"></div>--> 
+      <!-- 标题字号没有太大存在必要,三种尺寸的文字加字宽组合足以应对大部分需求,在需要用到title的地方,一般都会提供具体的title应用样式 -->
+      <div sub-chapter="排版" page="text.typeset"></div>
+       <!--<div sub-chapter="列表" page="text.list"></div> -->
     </div>
 
-    <div chapter="按钮"></div>
+    <div chapter="按钮">
+      <div sub-chapter="" page="button.base"></div>
+    </div>
 
-    <div chapter="布局及排版"></div>
+    <div chapter="表格">
+      <div sub-chapter="基本表格" page="table.base"></div>
+    </div>
 
-    <div chapter="表单组件"></div>
+    <div chapter="表单">
+      <div sub-chapter="表单元素" page="form.base"></div>
+      <div sub-chapter="表单布局" page="form.layout"></div>
+    </div>
 
-    <div chapter="表单布局"></div>
+    <div chapter="布局及排版">
+      <div sub-chapter="栅格系统" page="layout.grid"></div>
+      <!--<div sub-chapter="内容" page="layout.content"></div>-->
+      <div sub-chapter="盒模型" page="layout.box-model"></div>
+    </div>
 
-    <div chapter="表格"></div>
+    <div chapter="辅助">
+      <div sub-chapter="常用" page="helper.base"></div>
+      
+      <!--
+        间距控制
+      -->
+    </div>
 
-    <div chapter="组件"></div>
+    <div chapter="组件">
+      <div sub-chapter="分页" page="component.pages"></div>
+      <div sub-chapter="标题栏" page="component.brow"></div>
+      <div sub-chapter="模态框" page="component.modal"></div>
+
+      <!--
+        title / fieldset | 分组表头
+        dialog
+        modal
+        tooltip
+        message
+        pages
+        tabs
+        card
+        panel
+        loading
+        browser-not-supptort | 浏览器不兼容提示
+      -->
+    </div>
+
+    <!--<div chapter="图标">
+
+    </div>-->
 
   </div>
 
   
+<!--
+尽可能做"场景驱动"的样式和组件库
+所有样式的出现都是为了满足特定的场景需求
 
+尽可能做减法
+梳理各种场景的业务逻辑,提炼出最佳实践,然后实现出适合该场景的样式
+
+bootstrap太重,很多不满足特定场景的东西堆积在一起,看似能解决很多问题,但很难简单的解决问题
+
+
+样式用来实现效果，提升开发效率，样式越多越好，满足多样需求。
+规范用来约束样式，保持体验统一，规范越少越好，避免随意滥用。
+
+约定优于配置
+每一个样式最好都说明适用场景,每一个场景最好都说明样式使用建议,是为规范.
+-->
 </body>
 </html>

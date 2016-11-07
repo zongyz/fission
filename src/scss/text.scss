@@ -1,0 +1,148 @@
+/**
+ 文本
+ 
+ */
+
+/* 基本字体 */
+body{
+  font-family: 'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+  // font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
+  // font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  // font-family: PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+  font-size: 14px;
+  line-height: 1.5;
+  color:#333344;
+  -webkit-font-smoothing: antialiased;
+  // text-rendering: optimizelegibility;
+}
+
+/* 标题 */
+h1,h2,h3,h4,h5,h6{
+  margin:1em 0;
+}
+h1{
+  font-size:32px;
+}
+h2{
+  font-size:24px;
+}
+h3{
+  font-size:20px;
+}
+h4{
+  font-size:16px;
+}
+h5{
+  font-size:14px;
+}
+h6{
+  font-size:12px;
+}
+
+/* 段落 */
+p{
+  margin-top:0.8em;
+  margin-bottom:1em;
+  line-height:1.6;
+}
+.text-left{ //左对齐
+  text-align:left;
+}
+.text-right{ //右对齐
+  text-align:right;
+}
+.text-center{ //居中对齐
+  text-align:center;
+}
+.text-middle{ //垂直居中
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.text-nowrap{ //强制不换行
+  white-space: nowrap;
+}
+.text-break{ //强制换行
+  word-break:break-all;
+  word-wrap:break-word;
+}
+.text-space{ //分隔
+  margin-left:.5em;
+  margin-right:.5em;
+  color:#BBB;
+}
+.text-indent{ //缩进
+  text-indent : 2em;
+}
+
+/* 链接 */
+
+a{
+  cursor: pointer;
+  color:#3593BA;
+  text-decoration:none;
+}
+a:hover{
+  color:#2e78cc;
+  text-decoration:underline;
+}
+
+/* 文字颜色 */
+
+.text-muted{
+  color:#999;
+}
+
+.text-showy{
+  color:#FF6966;
+}
+
+/* 字形粗细 */
+strong, .text-bold{
+  font-weight:800;
+}
+.text-thin{
+  font-weight:200;
+}
+.text-regular{
+  font-weight:400 !important;
+}
+
+/* 尺寸 */
+small, .text-small{
+  font-size:12px;
+}
+.text-big{
+  font-size:16px;
+}
+
+/* 高亮 */
+mark, .text-mark{
+  background:#FCFFAA;
+  padding-left:2px;
+  padding-right:2px;
+}
+/* 下划线 */
+.text-underline{
+  text-decoration: underline;
+}
+/* 删除线 */
+.text-delete{
+  text-decoration: line-through;
+}
+/* 斜体 */
+.text-italic{
+  font-style:italic;
+}
+
+/* 自定义文字尺寸(不建议使用) */
+.fs-12{
+
+}
+.fs-14{
+}
+.fs-16{
+}
+.fs-18{
+}
+/* 自定义文字颜色(不建议使用) */

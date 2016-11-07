@@ -1,0 +1,33 @@
+.pages{
+    height:32px;
+    line-height:32px;
+    a{
+        display: inline-block;
+        padding:0px 12px;
+        text-decoration: none;
+        &.current,&.current:hover{
+            color:#000;
+            font-weight: bold;
+        }
+        &.prev-page:before{
+            content:"\2329";
+            font-size:12px;
+            font-weight: bold;
+        }
+        &.next-page:before{
+            content:"\232A";
+            font-size:12px;
+            font-weight: bold;
+        }
+        &:hover{
+            color:#f00;
+        }
+    }
+    // &.pages-border{
+    //     a{
+    //         line-height:30px;
+    //         border:1px solid #ddd;
+    //         border-radius:2px;
+    //     }
+    // }
+}

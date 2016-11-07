@@ -1,7 +1,7 @@
 {
-  "name": "reactor",
+  "name": "fission",
   "version": "0.0.1",
-  "homepage": "https://github.com/zongyz/reactor",
+  "homepage": "https://github.com/zongyz/fission",
   "authors": [
     "Pigz"
   ],
@@ -15,11 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs": "~2.1.20",
-    "backbone": "~1.2.3",
-    "jquery": "~2.1.4",
-    "angularjs": "~1.4.6",
-    "zepto": "~1.1.6",
+    "angularjs": "~1.2.*",
     "normalize.css": "~3.0.3"
   }
 }

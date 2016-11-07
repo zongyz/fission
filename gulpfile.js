@@ -13,12 +13,12 @@ var options = {
 
 gulp.task('scss:dev', function(){
 	var task = function(){
-		gulp.src('src/scss/all.scss')
+		// gulp.src('src/scss/!(_)*.scss')
+    gulp.src('src/fission.scss')
 			.pipe(sass.sync().on('error', sass.logError))
-			.pipe(gulp.dest('src/css'));
-
+			.pipe(gulp.dest('dist'));
 	}
-	gulp.watch(['src/scss/**.scss'], task);
+	gulp.watch(['src/scss/**/*.scss'], task);
 	task();
 });
 
@@ -28,7 +28,7 @@ gulp.task('demo:dev', function(){
       .pipe(sass.sync().on('error', sass.logError))
       .pipe(gulp.dest('demo'));
   }
-  gulp.watch(['demo/**.scss'], scssTask);
+  gulp.watch(['demo/**/*.scss'], scssTask);
   scssTask();
 
   var htmlTask = function(){

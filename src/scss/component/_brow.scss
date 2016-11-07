@@ -1,0 +1,25 @@
+@import "../mixin";
+
+.brow{
+    width:100%;
+    @include clearfix();
+    padding:8px 0px;
+    .brow-title{
+        float:left;
+        line-height:32px;
+        font-size:18px;
+        // font-weight: bold;
+        small{
+            font-weight: normal;
+            color:#999;
+        }
+    }
+    .brow-extend{
+        float:right;
+        height:32px;
+    }
+
+    &.brow-border{
+        border-bottom:1px solid #ddd;
+    }
+}

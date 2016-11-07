@@ -1,0 +1,177 @@
+<div>
+    <!--<fieldset>
+        <legend>表单分组</legend>
+    </fieldset>-->
+    <!--<div preview>
+        <div class="form-grid">
+            <div class="form-row">
+                <label class="form-label">用户名：</label>
+                <div class="form-field">
+                    <input class="form-text" type="text" name="" value="">
+                    <div class="form-help">
+                        help-text
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">密码：</label>
+                <div class="form-field">
+                    <input class="form-text" type="text" name="" value="">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-footer">
+                    <button type="">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div passage="典型应用">
+        <div preview>
+            <!-- 
+                挑选表单使用时的各种典型场景进行演示
+                并尝试多种情况组合下的效果
+            -->
+            <table class="form">
+                <tr>
+                    <td>
+                        用户名：
+                    </td>
+                    <td>
+                        <input class="form-text" type="text" name="" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>密 码：</label>
+                    </td>
+                    <td>
+                        <div class="form-block">
+                            <input class="form-text" type="password" name="" value="" placeholder="请输入密码">
+                        </div>
+                        <div class="form-block">
+                            <input class="form-text" type="password" name="" value="" placeholder="确认密码">
+                        </div>
+                        <div class="form-block text-muted text-small">
+                            help message...
+                        </div>
+                        <!--
+                            多个block元素排列时默认会紧贴，此时如果block元素带有border，border也会紧贴在一起
+                            此时应该使用.form-block控制多个block元素的排版，css会自动在多个block元素上增加间距
+                        -->
+                        <!--
+                            使用已提供的基本的样式组合（.form-block + .text-muted）已经可以用来展示表单的辅助信息，比如输入内容解释或表单验证结果
+                            但通常，我们更建议根据使用场景约定一些样式，如.form-help来展示辅助信息，.form-validate来展示表单验证结果，这样更有助于在交互层面的统一控制
+                        -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>简介：</label>
+                    </td>
+                    <td>
+                        <textarea class="form-text" rows="6"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        地区：
+                    </td>
+                    <td>
+                        <div class="form-inline">
+                            <select class="form-select">
+                                <option value="">河北省</option>
+                            </select>
+                        </div>
+                        <div class="form-inline">
+                            <select class="form-select">
+                                <option value="">唐山市</option>
+                            </select>
+                        </div>
+                        <!--
+                            html中的空格会对排版造成影响，
+                            如果源码中对代码进行换行操作，多个inline元素横排时会有一个空格的自然间距
+                            但如果代码被压缩后，空格消失，多个inline元素会紧贴一起
+                            这时应该使用.form-inline控制inline元素横排，css会在多个inline上增加间距
+                        -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>权限：</td>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                            中央厨房
+                            <small class="text-muted"> - 输入原料，产出食物</small>
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox">
+                            数据工厂
+                            <small class="text-muted"> - 科学发展，和谐世界</small>
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox">
+                            五谷粮仓
+                            <small class="text-muted"> - 秋收春种，冬养夏劳</small>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>验证码：</label>
+                    </td>
+                    <td>
+                        <div class="form-inline">
+                            <input class="form-text" type="text" name="" value="" size="12">
+                        </div>
+                        <div class="form-inline">
+                            <button class="btn-outline btn-narrow">获取验证码</button>
+                        </div>
+                        <div class="form-inline text-muted text-small">
+                            验证码已发送,请注意查收.
+                            <span class="text-showy">89秒</span>后可再次发送
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>所属分组：</td>
+                    <td>
+                        <div class="form-block">
+                            <strong>不可编辑的文字内容</strong>
+                            <br>
+                            <span>即使折行,排版依旧</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label>
+                            <input class="form-checkbox" type="checkbox" name="" value="">
+                            remember me?
+                        </label>
+                    </td>
+                </tr>
+                <!--
+                    一些带交互功能的功能不能仅使用样式实现，需要通过脚本加样式实现出一个完整的组件，并且在以后，会有大量带有交互效果的组件出现在表单中
+                    默认不用提供太多的组件，但需要给出组件开发约束，保证各个组件在表单布局中可以做到符合要求的间距，尺寸，排列组合
+                -->
+                <tr class="form-footer">
+                    <td></td>
+                    <td>
+                        <button class="btn-wide" type="">Submit</button>
+                        <button class="btn btn-outline btn-wide" type="">Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--
+    虽然使用<div>{display:table;}可以模拟一个表格布局的表单，但没必要为了使用div而使用
+    使用<table>作为表单布局可以减少大量class的用量，通过:first-child等伪类甚至可以不用给label列添加class，
+    tr,td等标签可以让代码结构更加清晰易读，同时，table原生的结构布局可以在样式缺失的情况下依然保持表单该有的排版
+-->

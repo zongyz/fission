@@ -1,0 +1,223 @@
+/**
+ 布局
+ 
+ */
+@import "mixin";
+
+$collapse : 16px;
+$dividerColor : #eee;
+
+.grid-display{
+    .grid{
+        // border-left:1px solid #E0E3E4;
+        // border-right:1px solid #E0E3E4;
+        // border:1px solid rgba(0,255,0,.7);
+        // box-shadow:1px 0px rgba(0,255,0,.5), -1px 0px rgba(0,255,0,.5);
+    }
+    .row{
+
+    }
+    [class^="col"]{
+        // border:1px solid rgba(255,0,0,.1);
+        // box-shadow:0px 0px 1px rgba(2550,0,0,.5);
+        // box-shadow:inset -1px 0px 0px #00f,-1px 0px 0px #f00;
+        p{
+            background:#F1F4F5;
+            border:1px solid #D9DBEC;
+            text-align: center;
+            border-radius: 0px;
+            color:#95A8B0;
+            line-height:32px;
+        }
+    }
+}
+
+.grid{
+    width: 100%;
+    // display: table;
+    // border-collapse:separate;
+    // border-spacing:10px 0px;
+    @include clearfix();
+}
+
+@mixin columnWidthRatio(
+    $column,
+    $ration
+){
+    .col-#{$ration}{
+        // display:table-cell;
+        width: ( 100% / $column * $ration );
+        
+    }
+}
+
+.row{
+    margin-left:-$collapse;
+    margin-right:-$collapse;
+    // display:table-row;
+    @include clearfix();
+    // overflow: hidden;
+    [class^="col-"]{
+        position:relative;
+        float:left;
+        padding-left:$collapse;
+        padding-right:$collapse;
+        min-height: 1px;
+    }
+    @for $i from 1 to 13 {
+        @include columnWidthRatio( 12, $i );
+    }
+}
+
+.grid-divider > .row{
+    & > [class^="col-"]{
+        box-shadow:inset 1px 0px 0px $dividerColor, 1px 0px 0px $dividerColor;
+        &:first-child{
+            box-shadow:1px 0px 0px $dividerColor;
+        }
+        &:last-child{
+            box-shadow:inset 1px 0px 0px $dividerColor;
+        }
+        &:first-child{
+            border-top:0;
+        }
+    }
+}
+
+.grid-collapse{
+    & > .row{
+        margin-left:0;
+        margin-right: 0;
+        [class^="col-"]{
+            padding-left:0;
+            padding-right:0;
+        }
+    }
+}
+
+.grid-exlarge{
+    & > .row{
+        margin-left:-$collapse*2;
+        margin-right: -$collapse*2;
+        [class^="col-"]{
+            padding-left:$collapse*2;
+            padding-right:$collapse*2;
+        }
+    }
+}
+
+
+.grid-table{
+    width:100%;
+    display: table;
+    border-collapse:collapse; // collapse | separate
+    // border-spacing:10px 10px;
+    border:1px solid #00f !important;
+    // margin-left:-$collapse;
+    // margin-right:-$collapse;
+    .row{
+        // border:1px solid #f90;
+        display: table-row;
+        margin-left:0;
+        margin-right:0;
+        [class^="col-"]{
+            float:none;
+            // padding-left:0;
+            // padding-right:0;
+            border-left:1px solid #f00;
+            border-top:1px solid #f00;
+            display: table-cell;
+            &:first-child{
+                border-left:none;
+            }
+        }
+        &:first-child{
+            [class^="col-"]{
+                border-top:none;
+            }
+        }
+    }
+}
+
+
+// .row-5{
+//     margin-left:-$collapse;
+//     margin-right:-$collapse;
+//     @include clearfix();
+//     @for $i from 1 to 5 {
+//         @include columnWidthRatio( 5, $i );
+//     }
+// }
+
+
+ /*
+    栅格系统使用box-sizing
+    
+    定宽(960px|1200px...)|自适应(100%) .grid-960|.grid-1200|.grid-fill
+    有距|无距 .grid-collapse
+    栅格行 .row-12 | .row-5
+    列组合(经典12列[2,3,4,6]|5列).col-1 | .col-1
+
+    //可以参考http://purecss.io/grids/ 12列+5列组合
+    //http://semantic-ui.com/collections/grid.html#/definition divider
+
+    关于响应式:应根据响应式计算展示出不同响应宽度区间的每个栅格最大宽度和最小宽度
+    //<del>响应式样式设置应该应用于contioner上</del>
+*/
+
+
+
+/* box-model */
+
+$edge : 16px;
+$borderColor : #eee;
+
+.padding-top{
+    padding-top:$edge;
+}
+.padding-bottom{
+    padding-bottom:$edge;
+}
+.padding-left{
+    padding-left:$edge;
+}
+.padding-right{
+    padding-right:$edge;
+}
+
+.padding-all{
+    padding:$edge;
+}
+
+.margin-top{
+    margin-top:$edge;
+}
+.margin-bottom{
+    margin-bottom:$edge;
+}
+.margin-left{
+    margin-left:$edge;
+}
+.margin-right{
+    margin-right:$edge;
+}
+
+.border-top{
+    border-top:1px solid $borderColor;
+}
+.border-left{
+    border-left:1px solid $borderColor;
+}
+.border-right{
+    border-right:1px solid $borderColor;
+}
+.border-bottom{
+    border-bottom:1px solid $borderColor;
+}
+
+.border-all{
+    border:1px solid $borderColor;
+}
+.border-none{
+    border:0;
+}

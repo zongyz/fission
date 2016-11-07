@@ -1,0 +1,100 @@
+/**
+ 按钮
+ 
+ */
+
+$borderRadius : 2px;
+
+$borderColor : #4E9BED;
+$bgColor : $borderColor;  // $bgColor : transparent;
+$textColor : #FFF;
+$hoverTextColor : $textColor;
+$hoverBorderColor : $borderColor;
+$hoverBgColor : $bgColor;
+
+@mixin buttonColor(
+  $color,
+  $bgColor,
+  $hoverBgColor
+){
+  color : $color;
+  background-color:$bgColor;
+  border-color:$bgColor;
+  &:hover{
+    color:$color;
+    background-color:$hoverBgColor;
+    border-color:$hoverBgColor;
+  }
+  &.btn-outline{
+    color:$bgColor;
+    background:none;
+    &:hover{
+      color:$hoverBgColor;
+    }
+  }
+  &.btn-noline{
+    color:$bgColor;
+    background:transparent;
+    border-color:transparent;
+    &:hover{
+      color:$hoverBgColor;
+    }
+  }
+}
+
+button, .btn{
+  line-height:30px;
+  letter-spacing:2px;
+  padding:0px 24px;
+  display:inline-block;
+  border-radius:$borderRadius;
+  border-style:solid;
+  border-width:1px;
+  text-decoration:none;
+  text-align:center;
+  cursor:pointer;
+  outline:none;
+  vertical-align: middle;
+  &:hover{
+    text-decoration:none;
+  }
+  &.btn-outline{
+  }
+  &.btn-noline{
+    padding:0px 12px;
+  }
+}
+
+button, .btn{
+  @include buttonColor(#fff, #6A8BB2, #5A7AA0);
+  &.btn-warning{
+    @include buttonColor(#fff, #DE9A82, #D48D77);
+  }
+  &.btn-success{
+    @include buttonColor(#fff, #80AE76, #6C9A61);
+  }
+  &.btn-disabled, &[disabled]{
+    cursor:not-allowed;
+    @include buttonColor(#888, #ccc, #ccc);
+    text-shadow:1px 1px 0px #eee;
+  }
+
+  &.btn-fill{
+    width:100%;
+  }
+  &.btn-narrow{
+    letter-spacing: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  &.btn-wide{
+    padding-left:48px;
+    padding-right:48px;
+  }
+
+  &.btn-small{
+    line-height:22px;
+    font-size:12px;
+    padding:0px 12px;
+  }
+}

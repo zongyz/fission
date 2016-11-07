@@ -1,0 +1,21 @@
+@import '__normalize';
+@import '_mixin';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+hr{
+  margin-top:16px;
+  margin-bottom: 16px;
+  border:0;
+  border-top:1px solid #eee;
+}

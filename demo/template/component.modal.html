@@ -1,0 +1,27 @@
+<div>
+    
+    <div preview>
+        
+        <div ng-class="{'modal-wrap':modalOpen}">
+            <div class="modal">
+                <button class="modal-close"  ng-click="modalOpen=false"></button>
+                <div class="modal-title">
+                    标题
+                </div>
+                <div class="modal-content">
+                    modal是所有弹出式交互的基础实现
+                </div>
+                <div class="modal-footer text-center">
+                    <button ng-click="modalOpen=false">确定</button>
+                    <button class="btn-outline" ng-click="modalOpen=false">取消</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="padding-all text-center">
+            <button class="btn-outline btn-success" ng-click="modalOpen=!modalOpen">{{modalOpen?'Close':'Open'}}</button>
+        </div>
+    </div>
+    
+    
+</div>
