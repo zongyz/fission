@@ -1,0 +1,18 @@
+.nav{
+    color:#333;
+    background-color: #F5F5F6;
+    @include clearfix();
+    .nav-item{
+        color:#333;
+        line-height:40px;
+        float:left;
+        padding-top:4px;
+        padding-bottom:4px;
+        padding-left:16px;
+        padding-right:16px;
+        &.current{
+            background-color:#6b8cb0;
+            color:#fff;
+        }
+    }
+}

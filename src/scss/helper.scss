@@ -1,12 +1,17 @@
 
 @import "mixin";
 
-.float-left{
+.left{
     float:left !important;
 }
-.float-right{
+.right{
     float:right !important;
 }
+.center{
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .clearfix{
   @include clearfix();
 }
@@ -16,4 +21,28 @@
     padding-top:4px;
     padding-bottom:4px;
     line-height:24px;
+}
+
+
+.width-ms{
+    width:240px;
+}
+
+.width-xs{
+    width:480px;
+}
+
+.width-sm{
+    width:640px;
+}
+
+.width-md{
+    width:960px;
+}
+
+.width-lg{
+    width:1200px;
+}
+.width-fill{
+    width:100%;
 }

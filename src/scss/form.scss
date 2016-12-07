@@ -1,8 +1,11 @@
+
+$baseHeight : 40px;
+
 .form-text{
     width:100%;
-    min-height:30px;
-    line-height:30px;
-    border:1px solid #aaa;
+    min-height:($baseHeight)-2;
+    line-height:($baseHeight)-2;
+    border:1px solid #bbb;
     border-radius: 2px;
     text-indent: 8px;
     vertical-align : middle;
@@ -22,9 +25,9 @@
 
 .form-select{
     display: inline-block;
-    height:30px;
+    height:($baseHeight)-2;
     background-color:#fff;
-    line-height:28px;
+    line-height:($baseHeight)-4;
     font-size:14px;
     border:1px solid #aaa;
     border-radius: 2px;
@@ -44,7 +47,13 @@
     }
 }
 
-
+.form-block{
+    display: block;
+    width:100%;
+    padding-top:6px;
+    padding-bottom:6px;
+    line-height: ($baseHeight)-12;
+}
 // .form-grid{
 //     width:100%;
 //     display: table;
@@ -92,40 +101,50 @@ table.form{
             padding-right:12px;
             white-space: nowrap;
             // text-align: right;
+            &[colspan]{
+                
+            }
         }
         td{
-            border-bottom:1px solid #eee;
-            height:32px;
-            line-height:32px;
+            height:$baseHeight;
+            line-height:$baseHeight;
             vertical-align: top;
             padding-top:12px;
             padding-bottom:12px;
         }
     }
-    tr.form-footer td{
+    tfoot tr td,tr.form-footer td{
         border-bottom: none;
         padding-top:24px;
         padding-bottom:24px;
     }
-    
-    .form-block{
-        display: block;
-        width:100%;
-        line-height: 32px;
+    &.form-divider{
+        tr td{
+            border-bottom:1px solid #eee;
+            padding-top:16px;
+            padding-bottom:16px;
+        }
+    }
+    &.form-nolabel{
+        tr td:first-child{
+            padding-right: 0px;
+            width: auto;
+            white-space: normal;
+        }
     }
     .form-block ~ .form-block{
         margin-top:8px;
     }
     .form-inline{
         display:inline-block;
-        height:32px;
+        height:$baseHeight;
     }
     .form-inline ~ .form-inline{
         margin-left:8px;
     }
     label{
         display: inline-block;
-        height:32px;
+        height:$baseHeight;
         vertical-align: middle;
     }
     // .form-text{

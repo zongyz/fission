@@ -637,19 +637,19 @@ mark, .text-mark {
   margin-right: 16px; }
 
 .border-top {
-  border-top: 1px solid #eee; }
+  border-top: 1px solid #ddd; }
 
 .border-left {
-  border-left: 1px solid #eee; }
+  border-left: 1px solid #ddd; }
 
 .border-right {
-  border-right: 1px solid #eee; }
+  border-right: 1px solid #ddd; }
 
 .border-bottom {
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #ddd; }
 
 .border-all {
-  border: 1px solid #eee; }
+  border: 1px solid #ddd; }
 
 .border-none {
   border: 0; }
@@ -659,7 +659,7 @@ mark, .text-mark {
  
  */
 button, .btn {
-  line-height: 30px;
+  line-height: 38px;
   letter-spacing: 2px;
   padding: 0px 24px;
   display: inline-block;
@@ -758,8 +758,8 @@ button, .btn {
     width: 100%; }
   button.btn-narrow, .btn.btn-narrow {
     letter-spacing: 0px;
-    padding-left: 8px;
-    padding-right: 8px; }
+    padding-left: 12px;
+    padding-right: 12px; }
   button.btn-wide, .btn.btn-wide {
     padding-left: 48px;
     padding-right: 48px; }
@@ -801,9 +801,9 @@ button, .btn {
 
 .form-text {
   width: 100%;
-  min-height: 30px;
-  line-height: 30px;
-  border: 1px solid #aaa;
+  min-height: 38px;
+  line-height: 38px;
+  border: 1px solid #bbb;
   border-radius: 2px;
   text-indent: 8px;
   vertical-align: middle;
@@ -819,9 +819,9 @@ button, .btn {
 
 .form-select {
   display: inline-block;
-  height: 30px;
+  height: 38px;
   background-color: #fff;
-  line-height: 28px;
+  line-height: 36px;
   font-size: 14px;
   border: 1px solid #aaa;
   border-radius: 2px;
@@ -836,6 +836,13 @@ button, .btn {
     color: #999;
     background-color: #eee; }
 
+.form-block {
+  display: block;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 28px; }
+
 table.form {
   width: 100%; }
   table.form tr td:first-child {
@@ -843,37 +850,44 @@ table.form {
     padding-right: 12px;
     white-space: nowrap; }
   table.form tr td {
-    border-bottom: 1px solid #eee;
-    height: 32px;
-    line-height: 32px;
+    height: 40px;
+    line-height: 40px;
     vertical-align: top;
     padding-top: 12px;
     padding-bottom: 12px; }
-  table.form tr.form-footer td {
+  table.form tfoot tr td, table.form tr.form-footer td {
     border-bottom: none;
     padding-top: 24px;
     padding-bottom: 24px; }
-  table.form .form-block {
-    display: block;
-    width: 100%;
-    line-height: 32px; }
+  table.form.form-divider tr td {
+    border-bottom: 1px solid #eee;
+    padding-top: 16px;
+    padding-bottom: 16px; }
+  table.form.form-nolabel tr td:first-child {
+    padding-right: 0px;
+    width: auto;
+    white-space: normal; }
   table.form .form-block ~ .form-block {
     margin-top: 8px; }
   table.form .form-inline {
     display: inline-block;
-    height: 32px; }
+    height: 40px; }
   table.form .form-inline ~ .form-inline {
     margin-left: 8px; }
   table.form label {
     display: inline-block;
-    height: 32px;
+    height: 40px;
     vertical-align: middle; }
 
-.float-left {
+.left {
   float: left !important; }
 
-.float-right {
+.right {
   float: right !important; }
+
+.center {
+  margin-left: auto;
+  margin-right: auto; }
 
 .clearfix:before, .clearfix:after {
   display: table;
@@ -887,6 +901,24 @@ table.form {
   padding-top: 4px;
   padding-bottom: 4px;
   line-height: 24px; }
+
+.width-ms {
+  width: 240px; }
+
+.width-xs {
+  width: 480px; }
+
+.width-sm {
+  width: 640px; }
+
+.width-md {
+  width: 960px; }
+
+.width-lg {
+  width: 1200px; }
+
+.width-fill {
+  width: 100%; }
 
 .pages {
   height: 32px;
@@ -988,3 +1020,23 @@ table.form {
       margin-left: 8px; }
       .modal .modal-footer button:first-child {
         margin-left: 0; }
+
+.nav {
+  color: #333;
+  background-color: #F5F5F6; }
+  .nav:before, .nav:after {
+    display: table;
+    content: " "; }
+  .nav:after {
+    clear: both; }
+  .nav .nav-item {
+    color: #333;
+    line-height: 40px;
+    float: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    .nav .nav-item.current {
+      background-color: #6b8cb0;
+      color: #fff; }

@@ -150,7 +150,30 @@ module.run(["$templateCache", function($templateCache) {
     "        </div>\n" +
     "    </div>\n" +
     "    \n" +
-    "    \n" +
+    "</div>");
+}]);
+})();
+
+(function(module) {
+try { module = angular.module("demoTemplate"); }
+catch(err) { module = angular.module("demoTemplate", []); }
+module.run(["$templateCache", function($templateCache) {
+  "use strict";
+  $templateCache.put("component.nav.html",
+    "<div>\n" +
+    "    <div preview>\n" +
+    "        <div class=\"nav\">\n" +
+    "            <div class=\"nav-item\">BADGE</div>\n" +
+    "        \n" +
+    "            <a href=\"\" class=\"nav-item current\">User</a>\n" +
+    "            <a href=\"\" class=\"nav-item\">Content</a>\n" +
+    "            <a href=\"\" class=\"nav-item\">Setting</a>\n" +
+    "\n" +
+    "            <div class=\"right\">\n" +
+    "                <a href=\"\" class=\"nav-item\">Logout</a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "</div>");
 }]);
 })();
@@ -164,7 +187,7 @@ module.run(["$templateCache", function($templateCache) {
     "<div>\n" +
     "    <div preview>\n" +
     "        <div class=\"pages\">\n" +
-    "            <div class=\"float-left\">\n" +
+    "            <div class=\"left\">\n" +
     "                <a href=\"\" class=\"prev-page\"></a>\n" +
     "                <a href=\"#\" class=\"current\">1</a>\n" +
     "                <a href=\"#\">2</a>\n" +
@@ -173,7 +196,7 @@ module.run(["$templateCache", function($templateCache) {
     "                <a href=\"#\">13</a>\n" +
     "                <a href=\"\" class=\"next-page\"></a>\n" +
     "            </div>\n" +
-    "            <div class=\"float-right\">\n" +
+    "            <div class=\"right\">\n" +
     "                <em class=\"text-muted\">\n" +
     "                    13 页 <span class=\"text-space\">/</span> 128条\n" +
     "                </em>\n" +
@@ -303,7 +326,7 @@ module.run(["$templateCache", function($templateCache) {
     "                挑选表单使用时的各种典型场景进行演示\n" +
     "                并尝试多种情况组合下的效果\n" +
     "            -->\n" +
-    "            <table class=\"form\">\n" +
+    "            <table class=\"form form-divider\">\n" +
     "                <tr>\n" +
     "                    <td>\n" +
     "                        用户名：\n" +
@@ -459,26 +482,29 @@ module.run(["$templateCache", function($templateCache) {
     "    <div passage=\"浮动\">\n" +
     "        <div preview>\n" +
     "            <div class=\"clearfix\">\n" +
-    "                <div class=\"float-left\">\n" +
-    "                    .float-left 向左浮动\n" +
+    "                <div class=\"left width-ms border-all padding-all text-center\">\n" +
+    "                    .left 向左浮动\n" +
     "                </div>\n" +
-    "                <div class=\"float-right\">\n" +
-    "                    .float-left 向左浮动\n" +
+    "                <div class=\"right width-ms border-all padding-all text-center\">\n" +
+    "                    .left 向左浮动\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"clearfix\">\n" +
+    "            <div class=\"clearfix width-ms border-all padding-all text-center\">\n" +
     "                .clearfix 清除浮动\n" +
+    "            </div>\n" +
+    "            <div class=\"center width-ms border-all padding-all text-center\">\n" +
+    "                .center 居中\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "\n" +
     "    <div passage=\"文字\">\n" +
     "        <div preview>\n" +
-    "            <div class=\"float-left\">\n" +
+    "            <div class=\"left\">\n" +
     "                <input type=\"text\" class=\"form-text\">\n" +
     "            </div>\n" +
-    "            <div class=\"float-right padding-left\">\n" +
-    "                <div class=\"text-box\">\n" +
+    "            <div class=\"right padding-left\">\n" +
+    "                <div class=\"form-block\">\n" +
     "                    文字块对齐\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -494,6 +520,23 @@ module.run(["$templateCache", function($templateCache) {
     "            变更框架元件基准高度时，.text-box的高度也应随之调整\n" +
     "        </small>\n" +
     "    </p>\n" +
+    "</div>");
+}]);
+})();
+
+(function(module) {
+try { module = angular.module("demoTemplate"); }
+catch(err) { module = angular.module("demoTemplate", []); }
+module.run(["$templateCache", function($templateCache) {
+  "use strict";
+  $templateCache.put("helper.size.html",
+    "<div>\n" +
+    "    \n" +
+    "    <div passage=\"宽度\">\n" +
+    "        <div preview>\n" +
+    "            \n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "</div>");
 }]);
 })();
@@ -689,7 +732,7 @@ module.run(["$templateCache", function($templateCache) {
     "                <tr>\n" +
     "                    <td><input type=\"checkbox\" name=\"\" value=\"\"></td>\n" +
     "                    <td>\n" +
-    "                        <img src=\"https://cdn.v2ex.co/avatar/e271/b6ed/18318_normal.png\" class=\"avatar-32 float-left\" alt=\"\">\n" +
+    "                        <img src=\"https://cdn.v2ex.co/avatar/e271/b6ed/18318_normal.png\" class=\"avatar-32 left\" alt=\"\">\n" +
     "                    </td>\n" +
     "                    <td>\n" +
     "                        <strong>guest</strong>\n" +

@@ -53,7 +53,7 @@ gulp.task('develop', function(){
 	gulp.start('scss:dev', "demo:dev");
 
   browserSync({
-      files: ["src/css/**", "demo/*", "!demo/**.scss", "tmp/**"],
+      files: ["dist/**", "demo/*", "!demo/**.scss", "tmp/**"],
       server: {
           baseDir: "./",
           // directory : true
